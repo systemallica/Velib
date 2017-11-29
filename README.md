@@ -1,6 +1,6 @@
-# ValenBisi
+# Map fro Velib
 
-ValenBisi is an Android aplication designed to be useful for the users of the public bike network in Valencia. With this in mind, ValenBisi displays real-time information about the bike stations all around the city, in a clean, easy-to-use and colorful way. 
+Map for Velib is an Android aplication designed to be useful for the users of the public bike network in Paris. With this in mind, Map for Velib displays real-time information about the bike stations all around the city, in a clean, easy-to-use and colorful way.
 
 You can use this app to see where the stations are located, how many bikes are there in each station and how many places to leave your bike are left. Besides, you can choose between a wide range of options to customize the app to your liking, and display different types of information.
 
@@ -17,8 +17,6 @@ It has been developed using the Material Design guidelines provided by Google, a
 * Option to choose between going on foot or on bike
 * Option to choose the displayed map
 * Option to zoom to current location on app start-up
-* Option to show Voronoi cells on map
-* Option to show free bike parking spots
 * Option to show map as satellite view
 * Toggle bike lanes
 * Toggle stations
@@ -32,4 +30,4 @@ It has been developed using the Material Design guidelines provided by Google, a
 
 If you have any problem with the app you can open an issue here on GitHub or email me at:
 
-soporte.valenbisi@gmail.com
+systemallica.apps@gmail.com
