@@ -27,7 +27,6 @@
     <string name="source">Código fuente:</string>
     <string name="thanks">Agradecimientos:</string>
     <string name="version">Versión</string>
-    <string name="developer">Systemallica</string>
     <string name="ad_restore_hint">Oh&#8230; :( Si alguna vez cambias de opinión, tan solo dale al botón otra vez!</string>
     <string name="ad_restore">Restaurar anuncios</string>
     <string name="ad_remove_hint">Este botón quitará los anuncios para siempre, pero, si te gusta mi aplicación, por favor dejalos activados, me ayudan a seguir trabajando en ella.</string>

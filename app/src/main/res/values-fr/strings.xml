@@ -27,7 +27,6 @@
     <string name="source">Code source:</string>
     <string name="thanks">Remerciements:</string>
     <string name="version">Version</string>
-    <string name="developer">Systemallica</string>
     <string name="ad_restore_hint">Oh&#8230; :( Si un jour tu changes d\'avis, il suffit de clicker sur le bouton à nouveau! </string>
     <string name="ad_restore">Rétablir les publicités</string>
     <string name="ad_remove_hint">Ce bouton enlevera les publicités pour toujours, mais, si tu aimes mon application, laisse-lez activées s\'il te plaît, ils m\'aident à continuer à travailler sur elle.</string>

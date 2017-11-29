@@ -50,14 +50,14 @@ public class AboutFragment extends Fragment {
 
     //Open GitHub page
     @OnClick(R.id.github) public void github() {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/systemallica/ValenBisi"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/systemallica/Velib"));
         startActivity(browserIntent);
     }
 
     //Send email
     @OnClick(R.id.email) public void email() {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-        emailIntent.setData(Uri.parse("mailto:soporte.velib@gmail.com"));
+        emailIntent.setData(Uri.parse("mailto:systemallica.apps@gmail.com"));
         startActivity(emailIntent);
     }
 
