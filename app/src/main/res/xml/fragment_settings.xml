@@ -30,13 +30,13 @@
             android:summaryOn="@string/pref_mapView_summary_on"
             android:defaultValue="false" />
 
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
 
             android:key="bikeLanes"
             android:title="@string/bikeLanes"
             android:summaryOff="@string/pref_bikeLanes_summary_off"
             android:summaryOn="@string/pref_bikeLanes_summary_on"
-            android:defaultValue="false" />
+            android:defaultValue="false" />-->
 
         <CheckBoxPreference
 

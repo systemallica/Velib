@@ -456,7 +456,7 @@ public class MainActivity extends AppCompatActivity
         final OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("https://raw.githubusercontent.com/systemallica/ValenBisi/master/VersionCode")
+                .url("https://raw.githubusercontent.com/systemallica/Velib/master/VersionCode")
                 .build();
 
         client.newCall(request).enqueue(new Callback() {

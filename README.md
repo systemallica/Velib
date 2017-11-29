@@ -1,4 +1,4 @@
-# Map fro Velib
+# Map for Velib
 
 Map for Velib is an Android aplication designed to be useful for the users of the public bike network in Paris. With this in mind, Map for Velib displays real-time information about the bike stations all around the city, in a clean, easy-to-use and colorful way.
 

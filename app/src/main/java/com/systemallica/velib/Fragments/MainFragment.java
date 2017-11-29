@@ -5,11 +5,8 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -35,7 +32,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
-import com.google.maps.android.geojson.GeoJsonLineStringStyle;
 import com.google.maps.android.geojson.GeoJsonPoint;
 import com.google.maps.android.geojson.GeoJsonPointStyle;
 import com.systemallica.velib.PrivateInfo;
@@ -69,15 +65,15 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
     int locationRequestCode = 1;
     boolean stationsLayer = true;
     boolean onFoot = true;
-    private GeoJsonLayer lanes = null;
+    //private GeoJsonLayer lanes = null;
     private View view;
     double longitude;
     double latitude;
     private GoogleMap mMap;
     private Context context;
 
-    @BindView(R.id.btnLanesToggle)
-    Button btnLanesToggle;
+    //@BindView(R.id.btnLanesToggle)
+    //Button btnLanesToggle;
     @BindView(R.id.btnStationsToggle)
     Button btnStationsToggle;
     @BindView(R.id.btnOnFootToggle)
@@ -119,8 +115,8 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
 
         // Load icons
-        final Drawable myDrawableLaneOn = ContextCompat.getDrawable(context, R.drawable.ic_road_variant_black_24dp);
-        final Drawable myDrawableLaneOff = ContextCompat.getDrawable(context, R.drawable.ic_road_variant_off_black_24dp);
+        //final Drawable myDrawableLaneOn = ContextCompat.getDrawable(context, R.drawable.ic_road_variant_black_24dp);
+        //final Drawable myDrawableLaneOff = ContextCompat.getDrawable(context, R.drawable.ic_road_variant_off_black_24dp);
         // Map settings
         UiSettings mapSettings;
         // GPS object
@@ -305,7 +301,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
         final Drawable myDrawableStationsOff = ContextCompat.getDrawable(context, R.drawable.ic_map_marker_off_black_24dp);
         final Drawable myDrawableFavOn = ContextCompat.getDrawable(context, R.drawable.ic_star_black_24dp);
         final Drawable myDrawableFavOff = ContextCompat.getDrawable(context, R.drawable.ic_star_outline_black_24dp);
-        final Drawable myDrawableLaneOn = ContextCompat.getDrawable(context, R.drawable.ic_road_variant_black_24dp);
+        //final Drawable myDrawableLaneOn = ContextCompat.getDrawable(context, R.drawable.ic_road_variant_black_24dp);
 
         if(getActivity() != null && isAdded()) {
             getActivity().runOnUiThread(new Runnable() {
@@ -313,7 +309,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
                     // Get user preferences
                     boolean showAvailable = settings.getBoolean("showAvailable", false);
                     boolean showFavorites = settings.getBoolean("showFavorites", false);
-                    boolean bikeLanes = settings.getBoolean("bikeLanes", false);
+                    //boolean bikeLanes = settings.getBoolean("bikeLanes", false);
                     boolean lastUpdated = settings.getBoolean("lastUpdated", true);
                     // Create empty GeoJsonLayer
                     JSONObject dummy = new JSONObject();
