@@ -151,6 +151,14 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
+        boolean firstLaunch = settings.getBoolean("firstLaunch", true);
+        //License management
+        if (firstLaunch) {
+            String clave = PrivateInfo.clave;
+            billingHelper = new IabHelper(context, clave);
+            billingHelper.startSetup(this);
+        }
+
         boolean donationPurchased = settings.getBoolean("donationPurchased", false);
 
         //Ads management
@@ -159,14 +167,6 @@ public class MainActivity extends AppCompatActivity
             //Ad request and load
             AdRequest adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
-        }
-
-        boolean firstLaunch = settings.getBoolean("firstLaunch", true);
-        //License management
-        if (firstLaunch) {
-            String clave = PrivateInfo.clave;
-            billingHelper = new IabHelper(context, clave);
-            billingHelper.startSetup(this);
         }
 
     }
