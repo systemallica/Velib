@@ -135,7 +135,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
                 float zoom = mMap.getCameraPosition().zoom;
                 if(zoom < 13.0 && layer.isLayerOnMap() && layer != null){
                     layer.removeLayerFromMap();
-                    Toast.makeText(getActivity().getApplicationContext(), "Zoom in to see the stations", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity().getApplicationContext(), R.string.zoom_in, Toast.LENGTH_LONG).show();
                 }else if(zoom >= 13.0 && !layer.isLayerOnMap() &&layer != null){
                     layer.addLayerToMap();
                 }

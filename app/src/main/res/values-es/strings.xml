@@ -85,4 +85,5 @@
     <string name="alpha_message">Atención! Estás usando una versión alpha. Puede contener fallos.</string>
     <string name="data_old">Los datos llevan más de una hora sin actualizarse,</string>
     <string name="data_unreliable">puede que no coincidan con la realidad.</string>
+    <string name="zoom_in">Haz zoom para ver las estaciones</string>
 </resources>
