@@ -29,7 +29,7 @@
     <string name="version">Version</string>
     <string name="ad_restore_hint">Oh&#8230; :( Si un jour tu changes d\'avis, il suffit de clicker sur le bouton à nouveau! </string>
     <string name="ad_restore">Rétablir les publicités</string>
-    <string name="ad_remove_hint">Ce bouton enlevera les publicités pour toujours, mais, si tu aimes mon application, laisse-lez activées s\'il te plaît, ils m\'aident à continuer à travailler sur elle.</string>
+    <string name="ad_remove_hint">Ce bouton enlevera les publicités pour toujours, mais, si tu aimes mon application, laisse-lez activées s\'il te plaît, elles m\'aident à continuer à travailler sur elle.</string>
     <string name="descStar">Icône étoile</string>
     <string name="load_lanes">Chargement des voies cyclables&#8230;</string>
     <string name="load_stations">Chargement des stations&#8230;</string>
@@ -38,8 +38,8 @@
     <string name="initialZoom">Zoom initial</string>
     <string name="no_internet">Il n\'y a pas de connection internet.</string>
     <string name="no_internet_message">L\'application ne fonctionnera pas sans internet. Connecte-toi et redémarrela.</string>
-    <string name="pref_initialZoom_summary_off">Il n\'y aura pas de zoom à la position actuelle au démarrage de l\'application.</string>
-    <string name="pref_initialZoom_summary_on">Au démarrage de l\'application, il y aura un zoom à la position actuelle.</string>
+    <string name="pref_initialZoom_summary_off">Il n\'y aura pas de gros plan sur la position actuelle au démarrage de l\'application.</string>
+    <string name="pref_initialZoom_summary_on">Au démarrage de l\'application, il y aura un gros plan sur la position actuelle.</string>
     <string name="update_available">Mise à jour disponible</string>
     <string name="update_message">Veux-tu mettre à jour l\'application?</string>
     <string name="update_never">Jamais</string>
@@ -79,11 +79,11 @@
     <string name="last_updated">Dernière mise à jour:</string>
     <string name="pref_lastUpdated_summary_on">La dernière mise à jour sera affichée</string>
     <string name="pref_lastUpdated_summary_off">La dernière mise à jour ne sera pas affichée</string>
-    <string name="lastUpdated">Dernière mis à jour</string>
+    <string name="lastUpdated">Dernière mise à jour</string>
     <string name="closed">Station fermée</string>
     <string name="alpha_title">Version alpha</string>
     <string name="alpha_message">Atention! Tu est en train d\'utiliser una version alpha. Ça peut être instable.</string>
-    <string name="data_old">Les données n\'ont pas été mis a jour récemment,</string>
+    <string name="data_old">Les données n\'ont pas été mises a jour récemment,</string>
     <string name="data_unreliable">il est possible qu\'elles ne coïncident pas avec la réalité</string>
     <string name="zoom_in">Zoomez pour voire les stations</string>
 </resources>
