@@ -11,7 +11,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -160,7 +160,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
             } else {
                 mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
             }
-            mMap.setMinZoomPreference(11);
+            mMap.setMinZoomPreference(12);
 
             gps = new TrackGPS(context);
 
@@ -236,8 +236,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
                 mMap.setMyLocationEnabled(true);
             } else {
                 mMap.setMyLocationEnabled(false);
-                Snackbar.make(view, R.string.no_location_permission, Snackbar.LENGTH_SHORT).show();
-
+                Toast.makeText(getActivity().getApplicationContext(), R.string.no_location_permission, Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -319,7 +318,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
                         // If data is not empty
                         if (!jsonData.equals("")) {
                             // Show loading message
-                            Snackbar.make(view, R.string.load_stations, Snackbar.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity().getApplicationContext(), R.string.load_stations, Toast.LENGTH_LONG).show();
 
                             JSONArray jsonDataArray = new JSONArray(jsonData);
 
@@ -591,7 +590,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
                             });
                         // Show message if API response is empty
                         }else{
-                            Snackbar.make(view, R.string.no_data, Snackbar.LENGTH_LONG).show();
+                            Toast.makeText(getActivity().getApplicationContext(), R.string.no_data, Toast.LENGTH_LONG).show();
                         }
 
                         //if(bikeLanes){
@@ -690,6 +689,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onResume(){
         super.onResume();
+
         if(mMap != null && getActivity() != null) {
             if (Build.VERSION.SDK_INT >= 23) {
                 // Check location permission

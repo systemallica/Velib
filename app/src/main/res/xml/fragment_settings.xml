@@ -77,9 +77,6 @@
             android:entryValues="@array/languages_values"
             android:defaultValue="@string/default_locale_code"/>
 
-        <Preference
-            android:key="blank"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

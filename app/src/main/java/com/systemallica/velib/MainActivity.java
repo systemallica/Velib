@@ -159,13 +159,11 @@ public class MainActivity extends AppCompatActivity
             //Ad request and load
             AdRequest adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
-            mAdView.setVisibility(GONE);
         }
 
         boolean firstLaunch = settings.getBoolean("firstLaunch", true);
         //License management
         if (firstLaunch) {
-
             String clave = PrivateInfo.clave;
             billingHelper = new IabHelper(context, clave);
             billingHelper.startSetup(this);
@@ -178,8 +176,6 @@ public class MainActivity extends AppCompatActivity
         billingHelper = new IabHelper(context, clave);
         billingHelper.startSetup(this);
     }
-
-
 
     @Override
     public void onIabSetupFinished(IabResult result) {
@@ -342,7 +338,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_map) {
 
-            mAdView.setVisibility(GONE);
+            if(!removedAds) {
+                mAdView.setVisibility(View.VISIBLE);
+            }
 
             //Change toolbar title
             this.setTitle(R.string.nav_map);
@@ -372,9 +370,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_settings) {
 
-            if(!removedAds) {
-                mAdView.setVisibility(View.VISIBLE);
-            }
+            mAdView.setVisibility(View.GONE);
 
             FragmentTransaction ft = mFragmentManager.beginTransaction();
             ft.hide(getFragmentManager().findFragmentByTag("mainFragment"));
