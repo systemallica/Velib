@@ -6,5 +6,5 @@ public class PrivateInfo {
    //In-app purchase name
    static String donation = "donation_upgrade";
    //JCDecaux API key
-   public static String url = "https://api.jcdecaux.com/vls/v1/stations?contract=Paris&apiKey=adcac2d5b367dacef9846586d12df1bf7e8c7fcd";
+   public static String url = "https://api.citybik.es/v2/networks/velib";
 }

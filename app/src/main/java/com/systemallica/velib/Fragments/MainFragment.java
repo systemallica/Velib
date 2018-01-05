@@ -60,7 +60,7 @@ import okhttp3.ResponseBody;
 public class MainFragment extends Fragment implements OnMapReadyCallback {
 
     public static final String PREFS_NAME = "MyPrefsFile";
-    private final static String mLogTag = "GeoJsonDemo";
+    private final static String mLogTag = "Velib";
     private String url = PrivateInfo.url;
     int locationRequestCode = 1;
     boolean stationsLayer = true;
@@ -335,27 +335,28 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
                             // Show loading message
                             Toast.makeText(getActivity().getApplicationContext(), R.string.load_stations, Toast.LENGTH_LONG).show();
 
-                            JSONArray jsonDataArray = new JSONArray(jsonData);
-
                             // Parse data from API
-                            for(int i = 0; i < jsonDataArray.length(); i++){
+                            JSONObject jsonDataObject = new JSONObject(jsonData);
+                            JSONObject JSONNetwork = jsonDataObject.getJSONObject("network");
+                            JSONArray JSONStations = JSONNetwork.getJSONArray("stations");
+
+                            for(int i = 0; i < JSONStations.length(); i++){
                                 // Get current station position
-                                JSONObject station = jsonDataArray.getJSONObject(i);
-                                JSONObject latLong = station.getJSONObject("position");
-                                Double lat = latLong.getDouble("lat");
-                                Double lng = latLong.getDouble("lng");
+                                JSONObject station = JSONStations.getJSONObject(i);
+                                JSONObject extra = station.getJSONObject("extra");
+                                Double lat = station.getDouble("latitude");
+                                Double lng = station.getDouble("longitude");
                                 // Create point in map
                                 GeoJsonPoint point = new GeoJsonPoint(new LatLng(lat, lng));
                                 // Add properties
                                 HashMap<String, String> properties = new HashMap<>();
                                 properties.put("name", station.getString("name"));
-                                properties.put("number", station.getString("number"));
-                                properties.put("address", station.getString("address"));
-                                properties.put("status", station.getString("status"));
-                                properties.put("available_bike_stands", station.getString("available_bike_stands"));
-                                properties.put("available_bikes", station.getString("available_bikes"));
-                                properties.put("last_updated", station.getString("last_update"));
-                                properties.put("status", station.getString("status"));
+                                properties.put("number", extra.getString("uid"));
+                                properties.put("address", extra.getString("address"));
+                                properties.put("status", extra.getString("status"));
+                                properties.put("available_bike_stands", station.getString("empty_slots"));
+                                properties.put("available_bikes", station.getString("free_bikes"));
+                                properties.put("last_updated", extra.getString("last_update"));
                                 // Transform in GeoJsonFeature
                                 GeoJsonFeature pointFeature = new GeoJsonFeature(point, "Origin", properties, null);
                                 // Add feature to GeoJsonLayer
@@ -621,7 +622,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
 
                     } catch (JSONException e) {
 
-                        Log.e(mLogTag, "JSONArray could not be created");
+                        Log.e(mLogTag, "Error parsing JSON data");
 
                     }
                 }

@@ -25,4 +25,4 @@ android:
     - 'android-sdk-license-.+'
 
 script:
-./gradlew build
+  ./gradlew build
